@@ -18,11 +18,18 @@ const list = [
     objectID: 1,
   },
 ]
+
+
 function App() {
 
   return (
     <div>
-      <h1>React</h1>
+      <h1>My Hacker Stories</h1>
+      <ul>
+        {list.map(item => {
+          return <li key={item.objectID}>{item.title}</li>
+        })}
+      </ul>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />            
     </div>
