@@ -27,11 +27,14 @@ function App() {
       <h1>My Hacker Stories</h1>
       <ul>
         {list.map(item => {
-          return <li key={item.objectID}>{item.title}</li>
+          return (<li key={item.objectID}>
+            <a href={item.url}>{item.title}</a>
+            <p> Autor: {item.author}</p>
+            <p>Comments: {item.num_comments}</p>
+            <p>Poitns: {item.points}</p>
+            </li>)
         })}
-      </ul>
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />            
+      </ul>          
     </div>
   )
 }
