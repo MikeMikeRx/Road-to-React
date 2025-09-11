@@ -25,6 +25,13 @@ function App() {
   return (
     <div>
       <h1>My Hacker Stories</h1>
+      <List/>   
+    </div>
+  )
+}
+
+function List() {
+  return (
       <ul>
         {list.map(item => {
           return (<li key={item.objectID}>
@@ -34,8 +41,7 @@ function App() {
             <p>Poitns: {item.points}</p>
             </li>)
         })}
-      </ul>          
-    </div>
+      </ul> 
   )
 }
 
